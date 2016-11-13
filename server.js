@@ -52,6 +52,5 @@ app.get('/:date', checkDate);
 app.get('/', noInput);
 
 app.listen(process.env.Port || 8080, function() {
-    var port = server.address().port;
-    console.log('Listening on port', port);
+    console.log('Listening on port', this.address().port);
 });
